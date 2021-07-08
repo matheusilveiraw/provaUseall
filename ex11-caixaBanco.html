@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="valor-saque">
+
+    <button onclick="sacar()">Sacar!</button>
+
+    <div id="res">
+        
+    </div>
+
+    <script>
+        
+        function sacar() {      
+            
+            let valorSaque = parseInt(document.getElementById('valor-saque').value)
+
+            let notasSacadas = [0, 0, 0, 0]
+
+                        /*
+            Mapa da array 
+            pos 0 - 10
+            1 - 20
+            2 - 50
+            3 - 100
+            
+            */
+
+            console.log(valorSaque) 
+
+            while(valorSaque >= 10) { 
+
+                if(valorSaque >= 100) { 
+                    valorSaque = valorSaque - 100
+                    console.log(valorSaque)
+                    notasSacadas[3] += 1 
+
+                } else if(valorSaque >= 50) {
+                    valorSaque = valorSaque - 50
+                    console.log(valorSaque)
+
+                    notasSacadas[2] += 1 
+
+                } else if(valorSaque >= 20) {
+                    valorSaque = valorSaque - 20
+                    console.log(valorSaque)
+
+                    notasSacadas[1] += 1 
+
+                } else if (valorSaque >= 10) { 
+                    valorSaque = valorSaque - 10
+                    console.log(valorSaque)
+
+                    notasSacadas[0] += 1 
+                } else { 
+                    console.log('Não há notas de valor inferior a 10!')
+                }
+            }
+
+            console.log(5)
+            console.log(notasSacadas)
+
+            document.getElementById('res').innerText = 'R$' +valorSaque + ' não foram possiveis de sacar. Foram sacados: ' 
+            +notasSacadas[3]+ 'x nota(s) de R$100,' 
+            +notasSacadas[2]+ 'x nota(s) de R$50,' 
+            +notasSacadas[1]+ 'x nota(s) de R$20,' 
+            +notasSacadas[0]+ 'x nota(s) de R$10 ' 
+
+            /*
+            Mapa da array 
+           pos 0 - 10
+            1 - 20
+            2 - 50
+            3 - 100
+            
+            */
+
+        }
+    
+    </script>
+</body>
+</html>

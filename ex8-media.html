@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .entradas { 
+            display: inline-block;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+    <h3>Média 3 números </h3>
+
+    <input type="number" name="" id="valor1" class="entradas">
+    +
+    <input type="number" name="" id="valor2" class="entradas">
+    +
+    <input type="number" name="" id="valor3" class="entradas">
+
+    <button onclick="media3Numeros()">Média = </button> <span id="res1">Nenhum resultado!</span>
+
+
+    <hr>
+    <h3>Média infinitos valores</h3>
+    
+    <input type="number" name="" id="valor4" class="entradas">
+
+    <button onclick="addValor()"> Add Valor </button>
+
+    <button onclick="limpa()"> Limpa Array </button>
+
+    <button onclick="mediaInfinitos()">Média = </button> <span id="res2">Nenhum resultado!</span>
+
+    <div id="res2">
+
+    </div>
+    Valores Salvos: <span id="arr-valores"></span>
+    </div>
+
+    <script>
+        function media3Numeros() { 
+            let v1 = parseInt(document.getElementById('valor1').value)
+            let v2 = parseInt(document.getElementById('valor2').value)
+            let v3 = parseInt(document.getElementById('valor3').value)
+
+            let media = (v1 + v2 + v3) / 3
+            console.log(media)
+
+            document.getElementById('res1').innerText = media
+        }
+
+        var valores = []
+
+        function addValor() { 
+            let v = parseInt(document.getElementById('valor4').value)
+
+            if(Number.isNaN(v)) {
+                console.log('insira um valor permitido')
+            } else { 
+                valores.push(v)
+
+                console.log(valores)
+                
+                document.getElementById('arr-valores').innerText = valores
+            }
+        }
+
+        function mediaInfinitos() { 
+            
+            let media = 0
+
+            for (var i = 0; i < valores.length; i++) { 
+                media += valores[i]
+            }
+
+            media = media/valores.length
+
+            if(Number.isNaN(media)) { 
+                document.getElementById('res2').innerText = 'Insira valores'
+            } else { 
+                document.getElementById('res2').innerText = media
+            }
+
+            
+        }
+
+        function limpa() {
+            valores = []
+            console.log(valores)
+            document.getElementById('arr-valores').innerText = valores
+        }
+
+    </script>
+</body>
+</html>

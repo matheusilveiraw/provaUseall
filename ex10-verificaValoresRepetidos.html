@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valores = [1,2,3, 4, 4, 1]
+        //esse programa vai ser no hard code, lembre de digitar os valores dentro da array
+
+        for(var i = 0; i < valores.length; i++) { 
+
+            for (var j = 0; j < valores.length; j++) {
+
+                console.log(valores[i], valores[j])
+
+                //1,
+                //1, 2, 3, 4, 4, 1
+
+                //3, 
+                //1, 2, 3, 4, 4, 1
+
+                if(valores[i] == valores[j]) { 
+                    console.log('há valor repetido')
+                }
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

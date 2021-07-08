@@ -1,0 +1,28 @@
+Resolução:
+1-	10 * 4 – 8 + 24 / 8 
+24 / 8 = 3
+10 * 4 = 40 
+Ficando: 
+40 – 8 + 3 = 35
+
+2-	== - compara o valor, ignorando o tipo
+=== - compara o valor e o tipo 
+(em JS, em outra linguagem pode ser diferente)
+
+Quando usar == - quando o tipo da comparação não importa, por exemplo, 2 == ‘2’ retorna true
+Quando usar === - quando o tipo é importante, o mesmo exemplo anterior retorna falso, por exemplo
+
+3-	C) loop infinito, o valor inicial de num é -1 e durante o while ele recebe ele mesmo mais 0, como ele é condição para sair do while, vai ficar preso neste para sempre. 
+
+4-	
+1º console.log: novoNumero = 9
+2º console.log: a = 3
+
+5-	
+1º console - false
+2º console – true
+3º console – vai retornar um objeto (que se refere ao obj a)
+4º console -- vai retornar um objeto (que se refere ao obj b)
+5º console – a.nome recebe b.nome e imprime ‘Pedro’
+
+6-	x = 12, y = 19.4. Mas não consegui chegar no resultado por conta próprio. 
